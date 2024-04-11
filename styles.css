@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(275, 100%, 97%);
+  font-family: "Work Sans", sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.FAQ {
+  position: absolute;
+  top: 200px;
+  width: 600px;
+  height: auto;
+  border-radius: 15px;
+  background-color: hsl(0, 0%, 100%);
+  padding: 2em;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h1::before {
+  content: url("./assets/images/icon-star.svg");
+}
+
+button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: none;
+  background: none;
+  color: hsl(292, 42%, 14%);
+  padding: 0;
+}
+
+button:hover {
+  border: none;
+  background: none;
+  color: hsl(280, 63%, 51%);
+}
+
+.faq-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  column-gap: 1em;
+  border-bottom: 1px hsl(275, 100%, 97%) solid;
+  margin-bottom: 1rem;
+}
+
+.faq-section > p {
+  font: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: hsl(292, 16%, 49%);
+}
+
+.firstFAQ.hidden {
+  display: none;
+}
+
+.firstFaqButton::after {
+  content: url("./assets/images/icon-plus.svg");
+}
+
+.firstFaqButton.active::after {
+  content: url("./assets/images/icon-minus.svg");
+}
+
+.secondFaqButton::after {
+  content: url("./assets/images/icon-plus.svg");
+}
+
+.secondFaqButton.active::after {
+  content: url("./assets/images/icon-minus.svg");
+}
+
+.thirdFaqButton::after {
+  content: url("./assets/images/icon-plus.svg");
+}
+
+.thirdFaqButton.active::after {
+  content: url("./assets/images/icon-minus.svg");
+}
+
+.fourthFaqButton::after {
+  content: url("./assets/images/icon-plus.svg");
+}
+
+.fourthFaqButton.active::after {
+  content: url("./assets/images/icon-minus.svg");
+}
+
+.attribution {
+  position: absolute;
+  bottom: 20px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
