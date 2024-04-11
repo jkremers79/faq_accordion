@@ -15,19 +15,25 @@ body {
 section.FAQ {
   position: absolute;
   top: 200px;
-  width: 600px;
+  width: min(600px, 70%);
   height: auto;
   border-radius: 15px;
   background-color: hsl(0, 0%, 100%);
   padding: 2em;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 h1 {
   font-size: 3rem;
+  font-weight: 600;
 }
 
 h1::before {
+  position: relative;
   content: url("./assets/images/icon-star.svg");
+  margin-right: 1.5rem;
+  top: 5px;
 }
 
 button {
@@ -38,6 +44,8 @@ button {
   background: none;
   color: hsl(292, 42%, 14%);
   padding: 0;
+  margin-bottom: 1.5rem;
+  text-align: start;
 }
 
 button:hover {
@@ -46,28 +54,9 @@ button:hover {
   color: hsl(280, 63%, 51%);
 }
 
-.faq-section {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  column-gap: 1em;
-  border-bottom: 1px hsl(275, 100%, 97%) solid;
-  margin-bottom: 1rem;
-}
-
-.faq-section > p {
-  font: 1rem;
-  font-weight: 400;
-  letter-spacing: 1px;
-  color: hsl(292, 16%, 49%);
-}
-
-.firstFAQ.hidden {
-  display: none;
-}
-
 .firstFaqButton::after {
+  position: relative;
+  top: 10px;
   content: url("./assets/images/icon-plus.svg");
 }
 
@@ -76,6 +65,8 @@ button:hover {
 }
 
 .secondFaqButton::after {
+  position: relative;
+  top: 10px;
   content: url("./assets/images/icon-plus.svg");
 }
 
@@ -84,6 +75,8 @@ button:hover {
 }
 
 .thirdFaqButton::after {
+  position: relative;
+  top: 10px;
   content: url("./assets/images/icon-plus.svg");
 }
 
@@ -92,6 +85,8 @@ button:hover {
 }
 
 .fourthFaqButton::after {
+  position: relative;
+  top: 10px;
   content: url("./assets/images/icon-plus.svg");
 }
 
@@ -99,9 +94,46 @@ button:hover {
   content: url("./assets/images/icon-minus.svg");
 }
 
+.faq-section {
+  column-gap: 1em;
+  border-bottom: 1px hsl(275, 100%, 97%) solid;
+  margin-bottom: 1rem;
+}
+
+.faq-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.faq-section > p {
+  font: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: hsl(292, 16%, 49%);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  display: "";
+}
+
+.firstFAQ.hidden {
+  display: none;
+}
+
+.secondFAQ.hidden {
+  display: none;
+}
+
+.thirdFAQ.hidden {
+  display: none;
+}
+
+.fourthFAQ.hidden {
+  display: none;
+}
+
 .attribution {
   position: absolute;
-  bottom: 20px;
+  top: 1000px;
   font-size: 11px;
   text-align: center;
 }
