@@ -19,9 +19,7 @@ section.FAQ {
   height: auto;
   border-radius: 15px;
   background-color: hsl(0, 0%, 100%);
-  padding: 2em;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  padding: 1em;
 }
 
 h1 {
@@ -36,7 +34,12 @@ h1::before {
   top: 5px;
 }
 
+/* div.faq-section {
+  position: relative;
+} */
+
 button {
+  position: relative;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 1px;
@@ -46,6 +49,7 @@ button {
   padding: 0;
   margin-bottom: 1.5rem;
   text-align: start;
+  width: 80%;
 }
 
 button:hover {
@@ -54,7 +58,19 @@ button:hover {
   color: hsl(280, 63%, 51%);
 }
 
-.firstFaqButton::after {
+.faq-button::after {
+  position: absolute;
+  top: -5px;
+  right: -60px;
+
+  content: url("./assets/images/icon-plus.svg");
+}
+
+.faq-button.active::after {
+  content: url("./assets/images/icon-minus.svg");
+}
+
+/* .firstFaqButton::after {
   position: relative;
   top: 10px;
   content: url("./assets/images/icon-plus.svg");
@@ -92,7 +108,7 @@ button:hover {
 
 .fourthFaqButton.active::after {
   content: url("./assets/images/icon-minus.svg");
-}
+} */
 
 .faq-section {
   column-gap: 1em;
@@ -115,7 +131,7 @@ button:hover {
   display: "";
 }
 
-.firstFAQ.hidden {
+/* .firstFAQ.hidden {
   display: none;
 }
 
@@ -129,11 +145,15 @@ button:hover {
 
 .fourthFAQ.hidden {
   display: none;
+} */
+
+.textFaq.hidden {
+  display: none;
 }
 
 .attribution {
   position: absolute;
-  top: 1000px;
+  bottom: -800px;
   font-size: 11px;
   text-align: center;
 }
