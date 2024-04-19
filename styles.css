@@ -14,8 +14,8 @@ body {
 
 section.FAQ {
   position: absolute;
-  top: 200px;
-  width: min(600px, 70%);
+  top: 160px;
+  width: min(600px, 78%);
   height: auto;
   border-radius: 15px;
   background-color: hsl(0, 0%, 100%);
@@ -33,10 +33,6 @@ h1::before {
   margin-right: 1.5rem;
   top: 5px;
 }
-
-/* div.faq-section {
-  position: relative;
-} */
 
 button {
   position: relative;
@@ -70,58 +66,18 @@ button:hover {
   content: url("./assets/images/icon-minus.svg");
 }
 
-/* .firstFaqButton::after {
-  position: relative;
-  top: 10px;
-  content: url("./assets/images/icon-plus.svg");
-}
-
-.firstFaqButton.active::after {
-  content: url("./assets/images/icon-minus.svg");
-}
-
-.secondFaqButton::after {
-  position: relative;
-  top: 10px;
-  content: url("./assets/images/icon-plus.svg");
-}
-
-.secondFaqButton.active::after {
-  content: url("./assets/images/icon-minus.svg");
-}
-
-.thirdFaqButton::after {
-  position: relative;
-  top: 10px;
-  content: url("./assets/images/icon-plus.svg");
-}
-
-.thirdFaqButton.active::after {
-  content: url("./assets/images/icon-minus.svg");
-}
-
-.fourthFaqButton::after {
-  position: relative;
-  top: 10px;
-  content: url("./assets/images/icon-plus.svg");
-}
-
-.fourthFaqButton.active::after {
-  content: url("./assets/images/icon-minus.svg");
-} */
-
 .faq-section {
   column-gap: 1em;
   border-bottom: 1px hsl(275, 100%, 97%) solid;
   margin-bottom: 1rem;
 }
 
-.faq-section:last-child {
+.faq-section:nth-child(5) {
   border-bottom: none;
   margin-bottom: 0;
 }
 
-.faq-section > p {
+.faq-section.textFaq {
   font: 1rem;
   font-weight: 400;
   letter-spacing: 1px;
@@ -131,32 +87,23 @@ button:hover {
   display: "";
 }
 
-/* .firstFAQ.hidden {
-  display: none;
-}
-
-.secondFAQ.hidden {
-  display: none;
-}
-
-.thirdFAQ.hidden {
-  display: none;
-}
-
-.fourthFAQ.hidden {
-  display: none;
-} */
-
 .textFaq.hidden {
   display: none;
 }
 
 .attribution {
   position: absolute;
-  bottom: -800px;
+  bottom: -100px;
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 375px) {
+  section.FAQ {
+    border-radius: 10px;
+    top: 160px;
+  }
 }
