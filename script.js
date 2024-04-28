@@ -1,29 +1,12 @@
-function showFaq(clickedButton, text) {
+const buttons = document.querySelectorAll(".faq-button");
 
-    const element = document.querySelector(text).classList;
-    const button = document.querySelector(clickedButton).classList
+buttons.forEach((btn, index) => {
+    btn.addEventListener("click", () => showFAQ(index));
+})
 
-    if (element.contains("hidden")) {
-        element.remove("hidden");
-        button.add("active");
-    }
+function showFAQ(n) {
+    const elements = document.querySelectorAll(".faq-section");
+    const clickedElement = elements[n].classList;
 
-    else {
-        element.add("hidden");
-        button.remove("active");
-    }
-
+    clickedElement.toggle("active");
 }
-
-
-const firstButton = document.querySelector(".firstFaqButton");
-firstButton.addEventListener("click", () => showFaq(".firstFaqButton", ".firstFAQ"));
-
-const secondButton = document.querySelector(".secondFaqButton");
-secondButton.addEventListener("click", () => showFaq(".secondFaqButton", ".secondFAQ"));
-
-const thirdButton = document.querySelector(".thirdFaqButton");
-thirdButton.addEventListener("click", () => showFaq(".thirdFaqButton", ".thirdFAQ"));
-
-const fourthButton = document.querySelector(".fourthFaqButton");
-fourthButton.addEventListener("click", () => showFaq(".fourthFaqButton", ".fourthFAQ"));
